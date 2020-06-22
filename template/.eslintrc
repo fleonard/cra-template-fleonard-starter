@@ -1,0 +1,51 @@
+{
+  "extends": ["react-app", "prettier"],
+  "rules": {
+    "array-bracket-spacing": ["error", "never"],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "block-spacing": ["error", "always"],
+    "brace-style": ["error", "1tbs"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "object-curly-spacing": ["error", "always"],
+    "quotes": ["error", "double", { "allowTemplateLiterals": true }],
+    "semi": ["error", "always"],
+
+    "eqeqeq": "error",
+    "prefer-const": "error",
+
+    "max-len": "off",
+    "no-extra-boolean-cast": "off",
+
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          ["external", "internal"],
+          "parent",
+          ["sibling", "index"]
+        ],
+        "newlines-between": "always-and-inside-groups"
+      }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "styled-components",
+            "message": "Please import from styled-components/macro."
+          }
+        ],
+        "patterns": ["!styled-components/macro"]
+      }
+    ],
+
+    "prettier/prettier": ["warn"],
+
+    "react/jsx-fragments": "off"
+  },
+  "plugins": ["import"]
+}
