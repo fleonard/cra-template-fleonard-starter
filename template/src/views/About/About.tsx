@@ -10,6 +10,7 @@ const About: React.FC = () => {
       <Typography variant="h1">About</Typography>
       <Button
         variant="contained"
+        color="primary"
         type="button"
         className="btn"
         cy-data="go-back-button"

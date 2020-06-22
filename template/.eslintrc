@@ -43,8 +43,6 @@
       }
     ],
 
-    "prettier/prettier": ["warn"],
-
     "react/jsx-fragments": "off"
   },
   "plugins": ["import"]
