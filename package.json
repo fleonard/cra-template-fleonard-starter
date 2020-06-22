@@ -1,8 +1,8 @@
 {
   "name": "cra-template-fleonard-starter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
-  "author": "Francesco Leonardi <fleonardi86@gmail.com",
+  "author": "Francesco Leonardi <fleonardi86@gmail.com>",
   "main": "template.json",
   "description": "My starter toolkit for Create React App template with React Router, Redux, TypeScript, StyledComponents, MaterialUI and Enzyme",
   "keywords": [
