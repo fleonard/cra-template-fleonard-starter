@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { mount } from "enzyme";
+import { fireEvent, render } from "@testing-library/react";
 import configureStore from "redux-mock-store";
 
 import { actions } from "../../features/counter";
@@ -22,27 +22,30 @@ describe("Counter", () => {
   });
 
   it("renders correctly.", () => {
-    const wrapper = mount(
+    const { getByTestId } = render(
       <Provider store={store}>
         <Counter />
       </Provider>
     );
 
-    const countValue = wrapper.find("strong").text();
-    expect(countValue).toBe("42");
+    const countValue = getByTestId("counter");
+    expect(countValue.innerHTML).toBe("42");
   });
 
   it("should be possible to increment counter.", () => {
-    const wrapper = mount(
+    const { getByTestId } = render(
       <Provider store={store}>
         <Counter />
       </Provider>
     );
 
-    wrapper
-      .find("button")
-      .filter({ "aria-label": "increment" })
-      .simulate("click");
+    fireEvent(
+      getByTestId("increment"),
+      new MouseEvent("click", {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
 
     expect(store.dispatch).toBeCalledTimes(1);
 
@@ -50,16 +53,19 @@ describe("Counter", () => {
   });
 
   it("should be possible to decrement counter.", () => {
-    const wrapper = mount(
+    const { getByTestId } = render(
       <Provider store={store}>
         <Counter />
       </Provider>
     );
 
-    wrapper
-      .find("button")
-      .filter({ "aria-label": "decrement" })
-      .simulate("click");
+    fireEvent(
+      getByTestId("decrement"),
+      new MouseEvent("click", {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
 
     expect(store.dispatch).toHaveBeenCalledTimes(1);
 

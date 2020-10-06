@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About Component renders correctly 1`] = `
+<h1
+  class="MuiTypography-root MuiTypography-h1"
+>
+  About
+</h1>
+`;

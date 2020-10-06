@@ -2,22 +2,25 @@
 
 Tired of setting up everything from scratch when creating your React App?
 This template will solve all your issues, it's configured with:
+
 - [Typescript](https://www.typescriptlang.org/)
 - [Redux](https://redux.js.org/)
 - [React Router](https://reacttraining.com/react-router/)
 - [Styled Components](https://styled-components.com/)
 - [Material UI](https://material-ui.com/)
 - [Jest](https://jestjs.io/)
-- [Enzime](https://enzymejs.github.io/enzyme/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 - [ESlint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 
-
 ## How to use it
+
 ```
 npx create-react-app your-project --template cra-template-fleonard-starter
 ```
+
 or
+
 ```
 yarn create react-app your-project --template cra-template-fleonard-starter
 ```
@@ -57,8 +60,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Redux
+
 The basic configuration of Redux is done with [feature based](https://redux.js.org/style-guide/style-guide/#structure-files-as-feature-folders-or-ducks) folders and [Redux devtools](http://extension.remotedev.io/) browser extension is already configured.<br />
 Tehere is a basic `Counter` component already configured for you to see in `src/features` folder.
 
 ## Testing
-Testing is done with a combination of [Jest](https://jestjs.io/) and [Enzime](https://enzymejs.github.io/enzyme/)
+
+Testing is done with a combination of [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
