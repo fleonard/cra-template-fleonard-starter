@@ -22,7 +22,7 @@ npx create-react-app your-project --template cra-template-fleonard-starter
 or
 
 ```
-yarn create react-app your-project --template cra-template-fleonard-starter
+yarn create-react-app your-project --template cra-template-fleonard-starter
 ```
 
 ## Available Scripts
